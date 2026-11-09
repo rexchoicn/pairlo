@@ -1,6 +1,6 @@
 # Candidate design workspace
 
-Updated: 2026-11-09 (Asia/Singapore). Status: editable Figma baseline created and visually reviewed; product review is pending.
+Updated: 2026-11-10 (Asia/Singapore). Status: candidate baseline and selected Option B split-preview refinement available for review; implementation pending.
 
 ## Review links
 
