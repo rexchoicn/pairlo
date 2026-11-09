@@ -1,0 +1,96 @@
+# Project status
+
+Last updated: 2026-11-09 (Asia/Singapore)
+
+## Current phase
+
+Shared documentation (9 November): the user created the public [rexchoicn/pairlo](https://github.com/rexchoicn/pairlo) repository for current project/business context. Root project Markdown, a short START_HERE and the docs publication rules form the docs-only hub. Public copies omit personal account details. Ongoing documentation updates are part of completing meaningful work, with remote readback required before claiming synchronization; see DOCS_SYNC.md and DEC-044. App source remains local/unversioned and is not deployed by document publication.
+
+Figma design workspace (9 November): the user moved candidate design review into Figma and clarified Candidates, not Roles. Both supplied pages now contain an editable baseline: ten desktop screens covering the six profile tabs, directory/filter and add/edit forms, plus a UI Kit with 76 main components, eight variant sets and scoped colour/type/layout foundations. Figma structural and rendered visual checks pass; product review and Present-mode interaction checks remain pending. Earlier wireframes are preserved. See [FIGMA_CANDIDATES.md](FIGMA_CANDIDATES.md) and DEC-043. App code, saved data and deployment are unchanged; design edits do not automatically sync to code.
+
+Product refinement update (9 November): the local unified person-profile pilot now has plain-title, clickable opportunity cards, a sticky overview for active opportunities/next recorded interview, and an exact count of unlinked active roles opening a matching manual discovery list. The hierarchy varies type size, grouping and surface weight. Shared entity colours identify companies (blue), people (violet), roles (mint), tasks (amber) and placements (rose); record-type badges in Search/Drafts/Imports use the same palette. TypeScript, 236 tests/26 files, build/format, read-only SQL count checks and signed-in browser checks pass. The full profile remains a development-only pilot pending review; structured career editing and smart matching in [PRODUCT_REFINEMENT.md](PRODUCT_REFINEMENT.md) remain proposed. No schema/UAT changes or deployment. Git remains uninitialized. See UX-001/002 and DEC-041–042.
+
+Batches 1–6 passed their local desktop checkpoints. Batch 7 has a READY protected Vercel release and a passed signed-in hosted checkpoint: the approved task saves/reloads, drafts are guarded, saved CRM/ATS/commercial/import records load, the private CV downloads correctly, and import checking/search/analytics/defaults work. Browser warning/error logs are empty. Final-domain setup and actual partner use remain pending; the full POC is not yet accepted.
+
+| Area | Current state |
+| --- | --- |
+| Workspace | Runnable local React/Vite/TypeScript app; app Git remains uninitialized. Separate public GitHub docs hub at rexchoicn/pairlo; docs commits do not version or deploy the app. |
+| Design review | All nine Figma pages reviewed, including 54 wireframe masters and 39 named task flows |
+| Frontend | Desktop CRM/ATS, conversations/Tasks/Today, submission-through-placement records, Excel import/review/results, global search, analytics and personal defaults; shared guards/previews, sticky form actions and private Drafts |
+| Backend | Hosted pairlo-poc (`SUPABASE_PROJECT_REF`), Pairlo organization, Singapore (`ap-southeast-1`) |
+| Auth | First email/password tester created, confirmed and approved; public signup and anonymous sign-in independently verified disabled; owner-assisted provisioning/recovery, no SMTP |
+| Schema and files | Fifteen applied migrations, including optional role work arrangement, invoker role summaries/company activities, private form drafts and candidate LinkedIn; forced owner/approval RLS, version/retry checks and tracked private CVs |
+| Verification | Batch 7 TypeScript, 121 tests, build/format and production dependency audit pass. Five live SQL suites reran; the commercial rerun awaits connector confirmation (prior Batch 5/6 pass retained). Hosted signed-in checkpoint and HTTP/privacy checks pass. Fresh hosted writes cover the one approved task; other write flows retain earlier local/live SQL evidence. |
+| Hosting | Vercel pairlo-poc in PRIVATE_VERCEL_SCOPE; Node 24.x, public environment settings, SPA/security/no-index headers and a frontend upload allowlist |
+| Deployment | READY: https://pairlo-poc.vercel.app · exact build PRIVATE_DEPLOYMENT_ID. Vercel Authentication retained; no custom-domain/DNS/Auth-URL change yet. See HOSTING.md. |
+| Review annotations | Cause confirmed by controlled local A/B test: the current inline-style policy prevents ChatGPT's annotation overlay from working. The user reports only B works; allowing inline style elements also restores the inspected overlay to full viewport size. A targeted header change is proposed, with live-site verification still required after authorization. No app-header change or deployment has been made; diagnostics are stopped. See POC-012 / TESTING.md. |
+| Local review | http://127.0.0.1:5173; refined unified profile pilot alongside the existing pages, with shared entity badges in supporting screens. Latest suite has 236 passing tests across 26 files; TypeScript/build/format, read-only SQL and signed-in browser checks pass. Prior private-CV/workbench SQL evidence is retained; this refinement has no migration. Local frontend is not deployed. See TESTING.md and DEC-032–042. |
+| Neutral appearance | User approved the demo and requested sitewide implementation. Shared styles now supply the dark sidebar/CTAs, gray canvas, borderless white panels, outlined nested cards and neutral underlined links across directories, records, forms, dialogs and supporting screens. Purple marks selected tabs/current stage/route progress; status colours remain semantic. Prototype flag/stylesheet removed. TypeScript/155 tests/build/format pass; 17 signed-in page/state checks, selection/focus/preview checks and seven inspected screenshots pass. Sign-in/error styles inherit the shared tokens but were not separately walked through. No deployment. See POC-019 / DEC-038. |
+| Sticky actions and Drafts | Review 4 removes company/breadcrumb underlines and page-title subtitles; selected filter chips have a white checkbox/dark heavier tick. Page/form headers are sticky; record saves move to the header with secondary Save as draft and no Cancel/footer actions. A separate paginated Drafts/Discarded page resumes incomplete private snapshots and restores discarded drafts. Draft edits leave saved records unchanged until final Save, with original versions retained. Checked import rows can be drafted; files/credentials are excluded. 201 tests, live rollback-only isolation/retry checks and browser company/candidate/nested-conversation save/resume checks pass. See POC-020 / DEC-039. |
+| Role-focused review | Review 5 adds role cards and an inline preview with primary Find candidates, live pipeline counts and recorded next-step indicators. Work arrangement is optional; existing values remain blank. Company tabs are Roles/People/Activities/Detail, with Roles first and no redundant Company column. Recruitment sidebar follows Roles/Candidates/Companies/Placements. Fixed-option table cells use chips. Invoker summaries count complete pipelines; Activities uses exact totals/20-row pages. 216 tests, live isolation/indicator/1,001-candidate SQL checks and browser sourcing/return/filter/selection/company/chip checks pass. UAT counts unchanged; no frontend deployment. See POC-021 / DEC-040. |
+| Candidate LinkedIn | Optional field implemented locally and in the hosted schema. URL validation/normalization, detail link, explicit clearing and old-client preservation pass TypeScript/155 tests/build/format and live rollback-only URL/isolation checks. Browser save/reload/clear and invalid-host checks pass; the temporary link is removed. No frontend deployment. |
+| Rich UAT portfolio | Loaded and verified after explicit user approval: 12 companies, 60 candidates, 27 contacts, 30 roles, 180 applications, 140 conversations, 8 placements and 120 tasks across May–November. All 60 new private CVs uploaded/downloaded with matching sizes/SHA256; previous CV retained (61 ready files total, zero incomplete). Graph checks, connected browser flows, directory counts, Today and six-month Analytics pass. See UAT_DATA.md / POC-017. |
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for implemented boundaries, [TESTING.md](TESTING.md) for evidence/limitations, [HOSTING.md](HOSTING.md) for the release/domain runbook, and [PARTNER_REVIEW.md](PARTNER_REVIEW.md) for the review walkthrough. Current fictional UAT data includes 78 recorded shortlists, 143 structured recruitment steps, 741 application events and 120 tasks (80 completed / 40 open), with the connected records counted above. The three existing import histories and core record IDs are retained with realistic labels; original marked test journeys were replaced under the approved backed-up plan. Preferences remain Hong Kong / no industry default / HKD, version 2. No real candidate data/CV, external messages or money were used. Placement creation timestamps reflect the backfill date; entered event dates span six months.
+
+## Sources and precedence
+
+- Latest explicit user decisions govern; significant decisions are appended to DECISIONS.md.
+- [Figma handoff](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=375-2) is a reference, not a frozen UX specification. All nine pages were reviewed on 2026-10-30.
+- Task Flows explain behaviour; Core/Supporting Wireframes provide states; Components/Foundations supply design patterns; Architecture/Review provide context. Archive / Base44 is historical research.
+- This file distinguishes implemented work, approved scope and proposals. Local code is the current technical truth.
+- GitHub `main` is the latest published, sanitized documentation snapshot. Read START_HERE.md first for business context. Other chats/Figma edits become project truth only when accepted and recorded; automatic cross-chat synchronization is not configured.
+- Candidate visual review now uses the editable [Figma workspace](FIGMA_CANDIDATES.md). Its initial baseline mirrors the latest local pilot; subsequent accepted design changes require explicit implementation and verification.
+
+## Approved POC scope
+
+- Private, invite-only workspace with isolated per-recruiter records; permanent placements first.
+- Companies, company contacts, reusable Person/Candidate identities, roles, independent candidate-role applications, activities, tasks, placements, basic search, analytics and preferences.
+- One Person can be both a company contact and candidate. Contact views must not expose confidential candidate information.
+- Applications independently track outreach responses, recruitment stage, compensation discussion and dated events. Candidate expectations stay distinct.
+- One conversation can record several role outcomes and selected follow-up tasks.
+- Placements originate from accepted applications. Invoice/payment and guarantee follow-up remain independent.
+- Company default percentage fee with optional role override; preserve agreed placement terms against later default edits.
+- Record submissions already performed outside the app. No recruitment email/CV sending integration.
+- Downloadable Excel template, upload/validation/duplicate review and explicit confirmation before creating imported records.
+- Desktop-only Figma-based UI, useful empty/loading/error states, sticky Save/Save as draft and a separate private Drafts page. Incomplete drafts stay outside live lists/pipelines/reports; editing drafts preserve the saved record until final Save. No mobile/tablet work.
+- Host the complete POC on the user's existing GoDaddy-managed domain/subdomain for partner review.
+- Supabase Auth, database-enforced account isolation and private CV/file access. Consent/retention management is deferred without removing these access boundaries.
+
+## Confirmed rules and remaining details
+
+- Batch 5 uses selected applications, a recorded recipient/date and notes for shortlists already sent. Only selected applications advance; later stages are retained.
+- Confirmed commercial model: explicit fee-basis amount/currency, inherited percentage with explicit placement override or fixed fee; guarantee dates/terms per placement; one invoice with multiple manual payments, including partial payments. No universal salary multiplier, percentage or guarantee duration.
+- Import rules are confirmed: separate .xlsx templates for companies, contacts and candidates; new records or explicit identity reuse without overwriting; selected valid rows only. Companies must already exist for contact/employer links. Each file is limited to 100 data rows and 1 MB. Arbitrary column mapping, updates and other entity imports remain outside this batch.
+
+## Delivery plan
+
+The user accepted the plan and requested Batches 1–7. The sequence has no calendar commitments.
+
+| Batch | Deliverable | Completion checkpoint |
+| --- | --- | --- |
+| 1. Secure foundation and first working slice | Complete: desktop shell, approved-user auth, Company create/list/detail, RLS/private file boundaries and hosting preparation. | Real tester create/reload/reopened sign-in persistence and corrected sign-out pass; two-account/anonymous database-policy tests pass. |
+| 2. Core CRM and candidates | Complete: company editing, contacts, reusable Person/Candidate profiles, filters/details, private CVs, related navigation and previews. | One identity reused; contact privacy, atomic/stale-save safeguards, filters/back context, drafts, actual PDF byte upload/download and anonymous denial verified. |
+| 3. Roles and applications | Complete: roles/hiring contacts, fee defaults/overrides, canonical links, independent response/stage, opportunity compensation/notes and dated history. | 58 tests, all three live SQL suites and desktop walkthrough pass. Same application from both contexts; opportunities/general expectations stay independent; duplicate links/history prevented. |
+| 4. Daily recruiter workflow | Complete: multi-role conversations, selected outcomes/tasks, explicit profile changes, candidate Activity, Tasks and Today. | 75 tests and four live SQL suites pass; desktop checkpoint verified one conversation/three outcomes/two selected tasks, independent pay/state, previews/guards, canonical history, task lifecycle and persisted edits. |
+| 5. Submission through placement | Complete: manual submissions, feedback/interviews/offers/acceptance, immutable placement terms and independent invoice/payment/guarantee follow-up. | 102 tests, five SQL suites and desktop walkthrough pass. Latest accepted offer required; explicit fee/role override saved; partial payments/correction/history and guarantee/task independence verified. Historical-default changes, retries and isolation covered by SQL. |
+| 6. Import and supporting features | Complete: three Excel templates, file checking/review/selection/confirmation/results, paginated global search, analytics and personal defaults. | 121 tests, six SQL suites and desktop checkpoint pass. Preview adds nothing; explicit reuse, duplicate/error skipping, no overwrites, saved results/reload and independent private profiles verified. Reports and restored defaults match saved data. |
+| 7. Hosted POC and partner walkthrough | In progress: protected production deployment READY and signed-in hosted checkpoint passed; partner/hosting guides prepared. Exact hostname, partner account, commercial SQL rerun and final acceptance are pending. | Partner uses end-to-end persisted recruitment/import flows through final URL; privacy/data-loss defects closed. |
+
+The first Vercel release is deployed; custom-domain partner review remains open. Track feedback in BACKLOG.md and significant accepted changes in DECISIONS.md. Separate testers have isolated records; a new partner account starts empty.
+
+## Deferred and inputs
+
+Teams/agency administration, subscriptions, contract staffing, AI parsing/matching, job scraping, automated WhatsApp/email sync, recruitment email sending, payment processing, advanced reporting, mobile/tablet and dark mode remain outside this POC. Figma routes marked proposed still need validation before expansion.
+
+See [BACKLOG.md](BACKLOG.md) for stable work/input IDs. The first tester is ready; commercial and first-import rules are confirmed. Partner emails are needed before access and the exact domain before DNS setup. Anonymized real-world spreadsheets remain useful for later compatibility feedback.
+
+## Next actions and acceptance
+
+Review/refine the candidate screens in [Figma](FIGMA_CANDIDATES.md), particularly identity hierarchy, relationship chips, opportunities and the next-action emphasis. The local pilot remains available for behavior comparison. User review is pending before global navigation/profile rollout. Company People redesign, structured career data and matching remain separate increments in PRODUCT_REFINEMENT.md. The user-created GitHub repository is for docs; a source-code Git baseline remains separate, unstarted work. Matching criteria/data and ranking still need product agreement. No schema or UAT records were changed.
+
+1. Review/annotate the local role cards and preview, especially the candidate brief and Find candidates path, indicator rules and company tabs. Roles is open inside ChatGPT; the existing local server is reused. Northbank Advisory and Adrian Chow remain private drafts and live UAT counts are unchanged. Existing role work arrangements remain blank until entered. Hosted Pairlo shares the database but retains its earlier UI build; no frontend deployment is authorized by the current task.
+2. Obtain the exact GoDaddy hostname and partner email, then complete only their dependent DNS/HTTPS/Auth URL/account steps. Preserve existing DNS and the separate operator approval boundary.
+3. Resolve the commercial SQL connector confirmation, finish the hosted/final-domain walkthrough and collect actual partner feedback using PARTNER_REVIEW.md.
+
+The full POC is complete only when its approved desktop recruitment and import journeys work with real persisted data, accounts/CVs are isolated, accidental navigation protects drafts, and the partner can use the same build on the final HTTPS domain. Provider-host signed-in/HTTP checkpoints passed. Actual partner/final-domain, native Excel and physical-device verification remain pending; TESTING.md distinguishes the current hosted checks from earlier write-flow evidence.

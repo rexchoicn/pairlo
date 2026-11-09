@@ -1,0 +1,4 @@
+# Public documentation hub: application files are intentionally excluded.
+*
+!/*.md
+!/.gitignore
