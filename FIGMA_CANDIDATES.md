@@ -69,6 +69,20 @@ The new frames use native editable layers, existing Pairlo variable-bound colour
 
 **Review gate:** Confirm whether the list-plus-preview improves sourcing versus the baseline table; whether role discovery and overdue next action have the right emphasis; which candidate facts should be visible in a dense list; and whether to propagate the visual language to Filters, Add/Edit and the other profile tabs. These are proposals, **not accepted requirements or implementation**. No global fit score, automatic matching, new schema, real candidate data, application deployment or runtime test is implied.
 
+## Candidate card V3 — three visual alternatives (9 November 2026, pending product review)
+
+Three **new editable full-page desktop proposals** sit side by side below V2 on **From Codex - Design** (`459:2`). The original ten-screen candidate baseline, earlier V2 frames and UI Kit remain intact.
+
+| Alternative | Figma frame | Main UX trade-off |
+| --- | --- | --- |
+| A — Experience Spotlight | [`510:2165`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=510-2165) | Spacious reference-inspired cards with prominent years-of-experience panel, company placeholder, icon facts and a persistent contextual preview. Fewer results per viewport. |
+| B — Editorial Roster | [`511:2236`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=511-2236) | Compact company-led rows, clear current title and years, grouped icon facts and recruiting state. Highest candidate density, no detail preview. |
+| C — Visual Candidate Grid | [`512:2307`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=512-2307) | Two-column cards with large company monogram placeholders, large experience badges, icon-labelled details and a dedicated recruitment-context footer. Easier visual browsing, less list density. |
+
+All three use the current Pairlo dark sidebar, native editable text/vectors, semantic variable-bound paints, 4px-grid auto-layout spacing and neutral company-logo monogram placeholders. Screens are illustrative rather than a new matching engine or live feature. **Years of experience and employers marked with an asterisk are invented sample content for layout evaluation, not persisted verified candidate facts.** Candidate years of experience are not an approved structured field; employer-logo support is also not a proven runtime feature. Existing recorded candidate/pay/notice/role data is represented only as sample copy.
+
+The Mina example card, Add candidate and Filters controls have sample Figma navigation reactions; these do not implement filtering, editing, matching, logo lookup or backend transactions. Final structural verification found no direct-child auto-layout overflow or off-grid spacing in newly built frames. The user has not yet selected a winning direction. Next UX review: compare skim speed at realistic result counts; assess whether experience should be dominant or simply a clear secondary signal; choose list vs grid, preview vs no preview, icon density and behaviour for missing employer/experience. Record acceptance in DECISIONS.md before implementation.
+
 ## Next action
 
 Review and edit the candidate screens in Figma. Record accepted visual/product changes in DECISIONS.md and update this baseline when implementing them. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
