@@ -58,6 +58,17 @@ A temporary live capture was used only as a comparison reference and removed. It
 
 An ignored `.local/figma-candidates-ledger.json` retains the task session, returned node IDs and structural evidence for follow-up edits. The durable review links and baseline are recorded here.
 
+## Candidate UX V2 — design proposal, not accepted (9 November 2026)
+
+Two **additional editable desktop frames** were created below the ten-screen baseline on the existing **From Codex - Design** page. The ten original candidate screens, UI Kit, app code and recorded UAT data remain unchanged.
+
+- [**V2 Candidates directory**](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=494-1976) — selected-person list and right preview instead of an equally weighted six-column table. Gives name/title, recorded pay period/notice, existing opportunity context, next follow-up and a full-profile entry; search and filters stay visible.
+- [**V2 Mina Summary**](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=496-2054) — compact identity and existing employer connection, explicit *Explore 15 active roles* (unlinked, **not ranked or matched**), two active opportunities, overdue follow-up, known preferences and private notes separated from shared contact relationships.
+
+The new frames use native editable layers, existing Pairlo variable-bound colours, the existing dark sidebar, reused company-link instances and auto-layout with 4px spacing. Relevant prototype navigation is attached: Mina's list row/profile button → V2 Summary; Add/Filters/Edit/Opportunities → existing baseline screens; Summary breadcrumb → V2 directory. Other visible controls remain design-only and do not implement backend actions.
+
+**Review gate:** Confirm whether the list-plus-preview improves sourcing versus the baseline table; whether role discovery and overdue next action have the right emphasis; which candidate facts should be visible in a dense list; and whether to propagate the visual language to Filters, Add/Edit and the other profile tabs. These are proposals, **not accepted requirements or implementation**. No global fit score, automatic matching, new schema, real candidate data, application deployment or runtime test is implied.
+
 ## Next action
 
 Review and edit the candidate screens in Figma. Record accepted visual/product changes in DECISIONS.md and update this baseline when implementing them. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
