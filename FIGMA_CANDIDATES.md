@@ -1,9 +1,10 @@
 # Candidate design workspace
 
-Updated: 2026-11-10 (Asia/Singapore). Status: candidate baseline and selected Option B split-preview refinement available for review; implementation pending.
+Updated: 2026-11-10 (Asia/Singapore). Status: candidate baseline, selected Option B split-preview refinement, and a separate three-screen Plain-inspired visual study are available for review; implementation pending.
 
 ## Review links
 
+- [Plain-inspired study / start here](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527) — three new exploratory screens, not an accepted replacement for Option B.
 - [Start with Mina's Summary](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=471-2).
 - [Screens index](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=481-2092) on **From Codex - Design** (`459:2`).
 - [UI Kit](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=468-70) on **From Codex - UI Kit** (`459:4`). Component masters sit to the right of the specimen sheet.
@@ -95,6 +96,43 @@ The Mina example card, Add candidate and Filters controls have sample Figma navi
 
 **Next product review:** Confirm whether this split is the desired final directory pattern; then decide whether list selection should preserve search/filters and whether the right panel should remain visible while scrolling. Extend only after review.
 
+## Plain-inspired visual study — three screens (10 November 2026)
+
+Status: **Exploration requested by the owner; final direction not selected.** The user supplied two Plain/Mobbin interface screenshots and requested three high-quality look-and-feel screens, without a new component library. This study does not supersede DEC-045, approve a global navigation change, or authorize implementation. All earlier screens, the preferred Option B, user-created copies (`524:16100`, `526:2926`) and the UI Kit remain untouched.
+
+### Review destinations
+
+All three new screens are native, editable **1600 × 1040** desktop frames, arranged side by side below the previous explorations on page `459:2`. An external study index explains the scope and illustrative data.
+
+| Screen | Figma destination | Composition |
+| --- | --- | --- |
+| Study index | [`532:2527`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527) | Three jump links, design scope and sample-data notice |
+| Candidates | [`529:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=529-2520) | Light dual navigation; compact flat roster; selected Mina row; independent right-side preview, follow-up, opportunities, contact and file modules |
+| Candidate detail | [`530:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=530-2520) | Slim app rail; persistent candidate list; central identity, summary, opportunities and activity; stackable preference/relationship/contact/meeting/private-file modules |
+| Role workspace | [`531:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=531-2520) | Engineering Manager pipeline; role-focused navigation; five-stage summary; hiring-contact, role-fact, follow-up and empty/collapsed contextual modules |
+
+### Visual direction
+
+Use Plain's light panel composition as a reference, not its support-specific workflow or branding. Retain Pairlo's recruitment language, separate application stage/response and manual action semantics. A narrow app rail and secondary navigation establish context; the full profile replaces the expanded navigation with a candidate list. Lists use hairlines and a pale selected-row tint rather than a separate outlined card per record. Context is organized into independent stacked panels with consistent headers and optional collapsed sections.
+
+This is a local visual treatment, not a published design-system contract: Inter; pale `#F8F8FA` canvas; white surfaces; `#E5E5EB` dividers; `#25252D` main text; `#6E6E7A` supporting text; `#EDF2FF` selection with `#4662BA` accent; charcoal primary actions. New auto-layout gaps/padding follow a 4px base. Existing global variables, components and text styles are not modified. Company and person graphics are editable monogram placeholders, not fetched logos or photos.
+
+The owner's uploaded images are the principal visual references. Additional official context reviewed: [Plain's redesigned-interface note](https://www.plain.com/changelog/redesigned-interface) and [January product update](https://www.plain.com/blog/january-product-update). These are reference sources, not evidence that Pairlo implements Plain features.
+
+### Content and interaction boundaries
+
+The study index explicitly labels illustrative content. Years of experience, some employers and the role-pipeline composition are design samples, not verified persisted candidate facts. Missing employer/experience examples are shown as **Not recorded**. The illustrative role pipeline has six people across Identified 2 / Screening 1 / Submitted 1 / Interview 1 / Offer 1; these are internally consistent design counts, not a live query. No candidate-quality score or automatic inference is introduced. Mina's role-discovery count means active roles with no existing pair, not ranked matches.
+
+Ten navigation hotspots were written/read back: seven between the three screens and three on the study index. The Candidates **Open full profile** action opens the new detail screen; its Engineering Manager role link opens the role workspace; Mina's pipeline identity returns to her profile. Back/list links return to the study listing. Search, filtering, display controls, record edits, tabs, row-selection changes, accordion toggles and action docks are visual references, not functional backend interactions. Present-mode click-through, scrolling and keyboard behavior were not manually tested.
+
+### Verification
+
+All three final screenshots were inspected after polish. Programmatic checks found no overflowing direct children in auto-layout containers and no off-grid padding/gaps. Screen-specific counts: Candidates 198 auto-layout frames / 148 text nodes / 149 vector nodes; Candidate detail 142 / 128 / 65; Role workspace 158 / 127 / 96. All three have zero image fills and zero new component or component-set nodes. Icons are native vectors; screens are not flattened screenshots.
+
+Selected text/background contrast pairs were checked (approximately 5.04:1 accent on selected fill, 5.03:1 green on status fill, 5.03:1 muted text on white); this is not a full accessibility audit. Color refinement, role navigation grouping, candidate identity bounds and the pipeline underline were corrected before the final renders.
+
+No application code, database, authentication, private-file permissions, saved UAT data, deployment, library publication or Code Connect configuration was changed. Runtime tests were not rerun. The next review is visual: whether the lighter navigation, flat roster and independent modular context are preferable to the retained Option B; only accepted changes should enter DECISIONS.md and implementation scope.
+
 ## Next action
 
-Review and edit the candidate screens in Figma. Record accepted visual/product changes in DECISIONS.md and update this baseline when implementing them. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
+Compare the separate Plain-inspired study with the retained Option B, then record accepted visual/product changes in DECISIONS.md before implementation. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
