@@ -1,10 +1,10 @@
 # Candidate design workspace
 
-Updated: 2026-11-10 (Asia/Singapore). Status: candidate baseline, selected Option B split-preview refinement, and a separate three-screen Plain-inspired visual study are available for review; implementation pending.
+Updated: 2026-11-10 (Asia/Singapore). Status: the three-screen Plain-inspired study has been refined in place with fixed single-column navigation, a joined candidate list/preview and a proposed sharper cobalt palette. Earlier baselines and Option B remain intact. Final visual acceptance and application implementation remain pending.
 
 ## Review links
 
-- [Plain-inspired study / start here](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527) — three new exploratory screens, not an accepted replacement for Option B.
+- [Refined Plain-inspired study / start here](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527) — see the latest refinement section below for confirmed structural direction versus proposed colours.
 - [Start with Mina's Summary](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=471-2).
 - [Screens index](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=481-2092) on **From Codex - Design** (`459:2`).
 - [UI Kit](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=468-70) on **From Codex - UI Kit** (`459:4`). Component masters sit to the right of the specimen sheet.
@@ -96,43 +96,75 @@ The Mina example card, Add candidate and Filters controls have sample Figma navi
 
 **Next product review:** Confirm whether this split is the desired final directory pattern; then decide whether list selection should preserve search/filters and whether the right panel should remain visible while scrolling. Extend only after review.
 
-## Plain-inspired visual study — three screens (10 November 2026)
+## Plain-inspired visual study — initial three-screen pass (10 November 2026)
 
-Status: **Exploration requested by the owner; final direction not selected.** The user supplied two Plain/Mobbin interface screenshots and requested three high-quality look-and-feel screens, without a new component library. This study does not supersede DEC-045, approve a global navigation change, or authorize implementation. All earlier screens, the preferred Option B, user-created copies (`524:16100`, `526:2926`) and the UI Kit remain untouched.
+Status of the initial pass: **Exploration requested by the owner; final direction not selected.** The user supplied two Plain/Mobbin interface screenshots and requested three high-quality look-and-feel screens, without a new component library. The structural and colour treatment in this initial pass was subsequently refined in place; see the current refinement section below. Earlier baselines, the preferred Option B, user-created copies (`524:16100`, `526:2926`) and the UI Kit remain untouched.
 
 ### Review destinations
 
-All three new screens are native, editable **1600 × 1040** desktop frames, arranged side by side below the previous explorations on page `459:2`. An external study index explains the scope and illustrative data.
+All three screens are native, editable **1600 × 1040** desktop frames, arranged side by side below the previous explorations on page `459:2`. Their node IDs remain stable across the refinement. An external study index explains the scope and illustrative data.
 
-| Screen | Figma destination | Composition |
+| Screen | Figma destination | Current composition |
 | --- | --- | --- |
 | Study index | [`532:2527`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527) | Three jump links, design scope and sample-data notice |
-| Candidates | [`529:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=529-2520) | Light dual navigation; compact flat roster; selected Mina row; independent right-side preview, follow-up, opportunities, contact and file modules |
-| Candidate detail | [`530:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=530-2520) | Slim app rail; persistent candidate list; central identity, summary, opportunities and activity; stackable preference/relationship/contact/meeting/private-file modules |
-| Role workspace | [`531:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=531-2520) | Engineering Manager pipeline; role-focused navigation; five-stage summary; hiring-contact, role-fact, follow-up and empty/collapsed contextual modules |
+| Candidates | [`529:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=529-2520) | Fixed single-column sidebar; flat candidate roster and selected-candidate inspector inside one shared outer container |
+| Candidate detail | [`530:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=530-2520) | Same fixed sidebar; no candidate-switching list; stronger identity/discovery header, summary and activity; modular supporting context |
+| Role workspace | [`531:2520`](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=531-2520) | Same fixed sidebar; Engineering Manager pipeline, clearer stage colours, hiring-contact and contextual modules |
 
-### Visual direction
+### Initial visual direction and references
 
-Use Plain's light panel composition as a reference, not its support-specific workflow or branding. Retain Pairlo's recruitment language, separate application stage/response and manual action semantics. A narrow app rail and secondary navigation establish context; the full profile replaces the expanded navigation with a candidate list. Lists use hairlines and a pale selected-row tint rather than a separate outlined card per record. Context is organized into independent stacked panels with consistent headers and optional collapsed sections.
+The initial pass used Plain's light panel composition as a reference, not its support-specific workflow or branding. Pairlo's recruitment language, separate application stage/response and manual action semantics were retained. It initially used an app rail plus secondary navigation, a candidate queue on the profile and independent right-side preview cards. Those three structural choices are replaced by the current refinement below. Hairline lists and modular supporting content are retained.
 
-This is a local visual treatment, not a published design-system contract: Inter; pale `#F8F8FA` canvas; white surfaces; `#E5E5EB` dividers; `#25252D` main text; `#6E6E7A` supporting text; `#EDF2FF` selection with `#4662BA` accent; charcoal primary actions. New auto-layout gaps/padding follow a 4px base. Existing global variables, components and text styles are not modified. Company and person graphics are editable monogram placeholders, not fetched logos or photos.
+The initial local visual treatment used Inter, pale `#F8F8FA` canvas, white surfaces, `#E5E5EB` dividers, `#25252D` main text, `#6E6E7A` supporting text, `#EDF2FF` selection with `#4662BA` accent, and charcoal primary actions. The current proposal uses sharper colours described below. Neither pass modifies the global UI Kit or publishes a design-system contract. Company and person graphics are editable monogram placeholders, not fetched logos or photos.
 
-The owner's uploaded images are the principal visual references. Additional official context reviewed: [Plain's redesigned-interface note](https://www.plain.com/changelog/redesigned-interface) and [January product update](https://www.plain.com/blog/january-product-update). These are reference sources, not evidence that Pairlo implements Plain features.
+The owner's uploaded images are the principal visual references. Additional official context reviewed in the initial study: [Plain's redesigned-interface note](https://www.plain.com/changelog/redesigned-interface) and [January product update](https://www.plain.com/blog/january-product-update). These are reference sources, not evidence that Pairlo implements Plain features.
 
 ### Content and interaction boundaries
 
 The study index explicitly labels illustrative content. Years of experience, some employers and the role-pipeline composition are design samples, not verified persisted candidate facts. Missing employer/experience examples are shown as **Not recorded**. The illustrative role pipeline has six people across Identified 2 / Screening 1 / Submitted 1 / Interview 1 / Offer 1; these are internally consistent design counts, not a live query. No candidate-quality score or automatic inference is introduced. Mina's role-discovery count means active roles with no existing pair, not ranked matches.
 
-Ten navigation hotspots were written/read back: seven between the three screens and three on the study index. The Candidates **Open full profile** action opens the new detail screen; its Engineering Manager role link opens the role workspace; Mina's pipeline identity returns to her profile. Back/list links return to the study listing. Search, filtering, display controls, record edits, tabs, row-selection changes, accordion toggles and action docks are visual references, not functional backend interactions. Present-mode click-through, scrolling and keyboard behavior were not manually tested.
+The initial pass had ten navigation hotspots. The current refinement retains the key Candidates **Open full profile** → candidate detail → Engineering Manager role workspace → Mina profile journey, while removing candidate-queue controls and adding Candidates links to the fixed detail/role sidebars. Search, filtering, display controls, record edits, tabs, row-selection changes, accordion toggles and action docks remain visual references, not functional backend interactions. Present-mode click-through, scrolling and keyboard behavior were not manually tested.
 
-### Verification
+### Initial verification
 
-All three final screenshots were inspected after polish. Programmatic checks found no overflowing direct children in auto-layout containers and no off-grid padding/gaps. Screen-specific counts: Candidates 198 auto-layout frames / 148 text nodes / 149 vector nodes; Candidate detail 142 / 128 / 65; Role workspace 158 / 127 / 96. All three have zero image fills and zero new component or component-set nodes. Icons are native vectors; screens are not flattened screenshots.
+All three initial screenshots were inspected after polish. Initial programmatic checks found no overflowing direct children in auto-layout containers and no off-grid padding/gaps. Initial screen-specific counts: Candidates 198 auto-layout frames / 148 text nodes / 149 vector nodes; Candidate detail 142 / 128 / 65; Role workspace 158 / 127 / 96. All three had zero image fills and zero new component or component-set nodes. Icons are native vectors; screens are not flattened screenshots.
 
-Selected text/background contrast pairs were checked (approximately 5.04:1 accent on selected fill, 5.03:1 green on status fill, 5.03:1 muted text on white); this is not a full accessibility audit. Color refinement, role navigation grouping, candidate identity bounds and the pipeline underline were corrected before the final renders.
+Initial selected text/background contrast pairs were approximately 5.04:1 accent on selected fill, 5.03:1 green on status fill and 5.03:1 muted text on white. These initial measurements are historical, not a full accessibility audit or the current palette values.
 
-No application code, database, authentication, private-file permissions, saved UAT data, deployment, library publication or Code Connect configuration was changed. Runtime tests were not rerun. The next review is visual: whether the lighter navigation, flat roster and independent modular context are preferable to the retained Option B; only accepted changes should enter DECISIONS.md and implementation scope.
+## Current refinement — fixed navigation, connected preview and sharper colour (10 November 2026)
+
+### Explicit owner direction
+
+The owner praised the overall Plain-inspired direction and requested: **one navigation column; no collapse control; the same side navigation on candidate detail; no menu for selecting another candidate on the detail screen; the candidate list and selected preview inside the same card; more energetic colours and stronger focal points.** These are requirements for this Figma refinement, not authorization to implement or deploy application code. The owner has not fixed a brand colour.
+
+### Delivered in Figma
+
+- All three existing study frames now use a **224px fixed single-column sidebar** with visible labels. The separate icon rail, duplicate nested destinations and candidate queue have been removed from these study frames. No sidebar-collapse control is shown. The detail breadcrumb and global Candidates item still provide a route back to the listing.
+- In Candidates, the **944px list and 408px preview share one 1352px white outer surface**, with a common border, zero gutter and an internal vertical divider. The right pane retains identity, follow-up, opportunities, contact and file sections, but no longer reads as a detached stack of external cards. Matching selection tint and Mina monograms connect the row to its preview.
+- Candidate detail uses a larger name, stronger violet identity marker, a softly tinted header and a saturated primary role-discovery action. The separate candidate-switching list is removed. Supporting preferences, contact, relationships, meetings and private-file modules remain secondary.
+- Role workspace receives the same fixed navigation and colour hierarchy, with stage-summary colours and status labels kept distinct from response values. Table columns and activity timestamps were realigned for the wider main panels.
+
+### Proposed palette — not a locked brand decision
+
+| Role | Proposed colour | Use |
+| --- | --- | --- |
+| Electric cobalt | `#315BFA` | Brand mark, primary actions, active navigation and selection indicators |
+| Selected fill | `#E7EEFF` | Selected candidate and related inspector context |
+| Violet | `#7041D7` | Selected person identity and Interview-stage accents |
+| Emerald | `#087D58` | Offer / Active status |
+| Coral | `#C93F32` | Overdue label, with a warm `#FFF1EC` follow-up surface |
+| Cool canvas | `#F4F6FC` | Quiet background around white working surfaces |
+
+The revised hues are local screen-level exploration overrides; existing global variables, components and UI-kit text styles remain unchanged. Status remains communicated by text as well as colour. No company-logo integration, matching engine or new experience field is implied.
+
+### Current verification and limits
+
+Final screenshots for all three refined screens were visually inspected. Programmatic checks passed with **zero direct-child auto-layout overflow and zero off-grid gaps/padding**, one fixed sidebar per screen and no candidate queue/collapsed rail. Candidates has 192 auto-layout frames / 148 text nodes; Candidate detail 123 / 104; Role workspace 151 / 127. All remain native editable layers, with no new components or image-filled screen surfaces. The list and preview were verified to have the same parent container (`541:2763`).
+
+Selected contrast checks: white on cobalt **5.24:1**, coral **4.95:1**, emerald **5.14:1**, violet **6.13:1**; body text on selected fill **12.95:1**. These are specific foreground/background calculations, not a full accessibility audit.
+
+This is a static selected-state design with limited cross-screen navigation, not a working data-bound preview. No application code, schema, authentication, private-file permissions, saved data, deployment, library publication or Code Connect configuration changed. Runtime tests were not rerun. Earlier Option B, user-created copies and original screens remain untouched.
 
 ## Next action
 
-Compare the separate Plain-inspired study with the retained Option B, then record accepted visual/product changes in DECISIONS.md before implementation. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
+Review the sharper palette and hierarchy in the refined three-screen study. Keep the owner's explicit structural constraints: single fixed navigation, no candidate switcher on detail, and a joined list/preview surface. The exact brand palette and final visual acceptance remain open before implementation. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
