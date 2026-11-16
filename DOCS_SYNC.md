@@ -1,6 +1,6 @@
 # Shared documentation and publication
 
-Last updated: 2026-11-09 (Asia/Singapore).
+Last updated: 2026-11-17 (Asia/Singapore).
 
 ## Purpose and scope
 
@@ -11,6 +11,7 @@ The application workspace remains local and is not initialized as a Git working 
 ## Source of truth and publication
 
 - `START_HERE.md`: concise product/business orientation and reading order.
+- `HANDOFF_NEW_PC.md`: current machine-transfer plan, local/cloud inventory, source-package requirement and new-PC setup. Private ZIPs and environment files are never published by the docs workflow.
 - `PROJECT_STATUS.md`: current implementation, verification, blockers and next action.
 - `BACKLOG.md`: mutable work with stable IDs.
 - `DECISIONS.md`: append-only accepted rationale; reversals are new entries.

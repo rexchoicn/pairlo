@@ -1,8 +1,10 @@
 # Pairlo: shared project context
 
-Last updated: 2026-11-09 (Asia/Singapore).
+Last updated: 2026-11-17 (Asia/Singapore).
 
 This is the short starting point for product/business conversations. Read [PROJECT_STATUS.md](PROJECT_STATUS.md) for current implementation, [PRODUCT_REFINEMENT.md](PRODUCT_REFINEMENT.md) for proposals, [DECISIONS.md](DECISIONS.md) for accepted decisions and [BACKLOG.md](BACKLOG.md) for the next work. The [GitHub documentation hub](https://github.com/rexchoicn/pairlo) is the shared published copy.
+
+Moving to a new computer: use [HANDOFF_NEW_PC.md](HANDOFF_NEW_PC.md). App source is still local-only and must be transferred privately; cloning this documentation repository is insufficient.
 
 ## Product direction
 
@@ -26,7 +28,11 @@ Current technical evidence: the latest local runtime checkpoint has 236 passing 
 
 The current focus is the unified person-profile pilot and stronger visual hierarchy. Candidates and company contacts can share one identity with distinct employer and business-contact relationships. The pilot leads with identity, opportunities, meeting context and the next follow-up. Charcoal actions/dark navigation stay quiet; coloured chips make company/person/role links recognizable.
 
-The user moved candidate design review into Figma. Ten editable candidate screens and a shared UI Kit are available:
+The user moved candidate design review into Figma. The latest recorded study (10 November) refines a fixed single-column sidebar, candidate list and preview inside one shared surface, and candidate detail without a candidate-switching menu. A sharper cobalt/violet/emerald/coral palette is proposed, not finalized. These structural design requests and static studies are not implemented in the local app. Experience/employer/pipeline examples in the study are illustrative.
+
+- [Latest three-screen study index](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=532-2527).
+
+The ten earlier editable candidate screens and shared UI Kit are also preserved:
 
 - [Candidate screens / start with Summary](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=471-2).
 - [UI Kit](https://www.figma.com/design/5ZDRXCDj97A00pgYFniMnN/Recruiter-SaaS?node-id=468-70).

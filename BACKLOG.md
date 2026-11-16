@@ -1,6 +1,6 @@
 # Backlog
 
-Last updated: 2026-11-09 (Asia/Singapore)
+Last updated: 2026-11-17 (Asia/Singapore)
 
 Mutable work/input list with stable IDs. Current truth is in [PROJECT_STATUS.md](PROJECT_STATUS.md), evidence in [TESTING.md](TESTING.md), and significant rationale in append-only [DECISIONS.md](DECISIONS.md). A pending input blocks only dependent work.
 
@@ -43,6 +43,7 @@ The user approved the contained UX-001/002 profile pilot for local review. Broad
 | --- | --- | --- |
 | OPS-001 | Application source-control baseline | Not started. The user-created public rexchoicn/pairlo is a docs-only hub, not an app-source backup. Local application Git remains uninitialized. Agree the source repository/visibility and review exclusions before separately authorized source initialization/commit/push. |
 | OPS-002 | Shared, current project documentation | Public docs-only hub at rexchoicn/pairlo/main, with START_HERE, current records and a repeatable allowlisted/redacted preparation workflow. Update and publish relevant docs after meaningful work; reconcile remote edits and verify hashes before claiming sync. Cross-chat decisions require an explicit accepted handoff. See DOCS_SYNC.md / DEC-044. |
+| OPS-003 | Transfer Pairlo to the new PC | Handoff Markdown and private source/reference packages prepared under outputs/pc-handoff/2026-11-17, with exact inventories/checksums. Newer remote design notes reconciled. Copy the source package, recreate private frontend configuration for the existing Supabase project, sign in and run checks/browser verification on the new PC. The public repo is docs-only; no source-control baseline, source upload, data reset or deployment is authorized by the move. See HANDOFF_NEW_PC.md / DEC-046. |
 | UX-001 | Shared linked-record chips and visual hierarchy | Refined locally: entity-specific blue/violet/mint/amber/rose palette, no-underlined linked chips, quiet status badges, larger headings and varied surfaces. Search/Drafts/Imports type badges share the palette. Profile layout remains a pilot; wider layout/link conversion awaits review. |
 | UX-002 | Unified person profile and career/preferences data | DEV-only pilot refined with full-surface opportunity links/plain titles, sticky active-opportunity/meeting entry points, exact unlinked-active-role discovery and latest recorded interview schedules. Current readback for Mina: 15 roles to explore, 2 active opportunities, 0 upcoming meetings/2 past schedules. TypeScript/236 tests/build/format, read-only SQL and browser checks pass. No saved data/schema changes. New career fields, matching and profile rollout remain deferred. |
 | UX-003 | Company People relationships and navigation | Next; follow the profile pilot. Distinguish business contacts from employment relationships before changing counts/views. |

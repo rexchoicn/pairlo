@@ -6,6 +6,8 @@ Batches 1–6 implement the private CRM/ATS, conversations/tasks, submission-thr
 
 ## Start with the project context
 
+Moving to another computer? Read [HANDOFF_NEW_PC.md](HANDOFF_NEW_PC.md) and transfer the private source ZIP. The public docs repository alone cannot restore or run the app.
+
 Read [START_HERE.md](START_HERE.md) for the product goal, current checkpoint and a prompt for business/design conversations. Then use [PROJECT_STATUS.md](PROJECT_STATUS.md), [PRODUCT_REFINEMENT.md](PRODUCT_REFINEMENT.md), [BACKLOG.md](BACKLOG.md) and the newest [DECISIONS.md](DECISIONS.md) entries. The current candidate review is in [Figma](FIGMA_CANDIDATES.md).
 
 GitHub is a docs-only hub. Public copies omit personal account details; [DOCS_SYNC.md](DOCS_SYNC.md) explains ongoing publication and cross-chat handoffs. The setup instructions below apply to the full local application workspace, which is not included in this repository.

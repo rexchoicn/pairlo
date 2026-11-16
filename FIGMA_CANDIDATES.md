@@ -168,3 +168,4 @@ This is a static selected-state design with limited cross-screen navigation, not
 ## Next action
 
 Review the sharper palette and hierarchy in the refined three-screen study. Keep the owner's explicit structural constraints: single fixed navigation, no candidate switcher on detail, and a joined list/preview surface. The exact brand palette and final visual acceptance remain open before implementation. Wider profile rollout, structured career data and matching remain separate proposed increments in PRODUCT_REFINEMENT.md.
+
